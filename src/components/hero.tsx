@@ -7,7 +7,7 @@ export default function Hero() {
              <div
              className="absolute inset-0 z-0"
              style={{
-                 backgroundImage: 'url("/zephyr_nlva-6 (1)_lowres_lowres.jpg")',
+                 backgroundImage: 'url("/hero-zephyr.jpg")',
                  backgroundSize: "cover",
                  backgroundPosition: "center",
                  opacity: 0.25,

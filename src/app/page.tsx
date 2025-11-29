@@ -3,8 +3,8 @@
 //import footer 
 //import featured products 
 //import footer 
-import Hero from "./components/hero";
-import FeaturedProducts from "./components/featured-products";
+import Hero from "../components/hero";
+import FeaturedProducts from "../components/featured-products";
 import Image from "next/image";
 
 export default function Home() : JSX.Element  {
