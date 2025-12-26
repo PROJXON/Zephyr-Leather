@@ -1,15 +1,3 @@
-//temp hard coded products data 
- 
-// const products =[
-//     {
-//         id: string;
-//         name: string;
-//         price: number; 
-
-//     }
-// ];
-
-//  
 
 //helper to return HTTP responses 
 import { NextResponse } from "next/server";
