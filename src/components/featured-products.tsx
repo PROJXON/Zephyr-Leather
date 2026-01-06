@@ -32,7 +32,7 @@ const featuredProducts: Product [] = [
 
 export default function FeaturedProducts() {
     return (
-        <section className="py-20 px-4 bg-background"> 
+        <section id="featured-products" className="py-20 px-4 bg-background">
         <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
             <p className="text-secondary text-sm tracking-widest uppercase mb-4">
