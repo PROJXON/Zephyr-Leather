@@ -5,21 +5,24 @@
 import {Heart, Share2} from "lucide-react";
 
 import { useState } from "react";
+import { BuyButton } from "@/components/buyButton";
 
 
 
 interface Product {
-  id: string
-  name: string
-  price: string
-  image: string
-  description: string
-  details: string
+  id: string;
+  stripeProductId: string;
+  name: string;
+  price: string;
+  image: string;
+  description: string;
+  details: string;
 }
 
 const products: Product [] = [
      {
         id: "1",
+        stripeProductId: "leather-holster",
         name: "Leather shoulder Holster double case for iPhone 12-13-14-15 pro /max & wallet / RUGER LCP concealed carry",
         price: "685.65",
         image: "/iphone-Holster.avif",
@@ -28,11 +31,21 @@ const products: Product [] = [
   },
    {
         id: "2",
+        stripeProductId: "sunglasses-case",
         name: "Leather glasses case Oxblood Red",
         price: "92.09",
         image: "/explorer-sunglasses-case-4_lowres.jpg",
         description: "Our glasses cases are designed by an ex-aviation engineer under specialized opticians guidance.",
         details: "Ideal for medium-sized glasses, these leather cases combine durability with sophistication. Each piece is handcrafted to cradle your frames securely while adding a refined touch to your accessories."
+  },
+   {
+        id: "3",
+        stripeProductId:"zlc-jacket",
+        name: "Leather Jacket",
+        price: "100.00",
+        image: "/",
+        description: "cool jacket.",
+        details: "keeps you warm "
   },
 ];
 
@@ -96,6 +109,17 @@ export default function ProductsPage() {
                         <button className="flex-1 bg-primary text-background font-semibold py-3 rounded-sm hover:bg-primary/90 transition">
                             Add to Cart
                         </button>
+                         {selectedProduct.stripeProductId ? (
+    <BuyButton productId={selectedProduct.stripeProductId} />
+  ) : (
+    <button
+      disabled
+      className="flex-1 bg-muted text-foreground/60 font-semibold py-3 rounded-sm cursor-not-allowed"
+      title="Not connected to Stripe yet"
+    >
+      Buy Now (coming soon)
+    </button>
+  )}
                     </div>
                 </div>
             </div>
